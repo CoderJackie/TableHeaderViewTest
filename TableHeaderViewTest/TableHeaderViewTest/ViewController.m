@@ -48,8 +48,12 @@
         frame.size.height = height;
         
         UIView *view=self.tableView.tableHeaderView;
-        view.frame=frame;
-        self.tableView.tableHeaderView =view;
+        [UIView animateWithDuration:0.5 animations:^{
+            view.frame=frame;
+            self.tableView.tableHeaderView =view;
+        }];
+        
+        
         
     } else {
         CGFloat height = 100;
@@ -57,8 +61,11 @@
         frame.size.height = height;
         
         UIView *view=self.tableView.tableHeaderView;
-        view.frame=frame;
-        self.tableView.tableHeaderView =view;
+        [UIView animateWithDuration:0.5 animations:^{
+            view.frame=frame;
+            self.tableView.tableHeaderView =view;
+        }];
+        
     }
     
     /*
